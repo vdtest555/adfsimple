@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "bilogsmarketenergy "
+				"container": "bilogsmarketenergy"
 			}
 		},
 		"schema": {
@@ -138,7 +138,7 @@
 										"type": "number"
 									},
 									"TotalDiscount": {
-										"type": "integer"
+										"type": "number"
 									},
 									"Saving": {
 										"type": "number"
