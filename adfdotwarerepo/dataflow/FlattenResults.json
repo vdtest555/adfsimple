@@ -1,0 +1,20 @@
+{
+	"name": "FlattenResults",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "RawEnergyLogs"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "FlattenResults"
+				}
+			],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> RawEnergyLogs\nRawEnergyLogs foldDown(unroll(UserFilter.ResultsAll),\n\tmapColumn(\n\t\tMarketId,\n\t\tResults,\n\t\tTrackingGuidJs,\n\t\tip,\n\t\twebsiteid,\n\t\tpartnerid,\n\t\tsessionid,\n\t\turl,\n\t\tactioncode,\n\t\tfilterid,\n\t\twebserver,\n\t\tcontractclassificationid,\n\t\tazureblobstorageurl,\n\t\tazureblobstoragesas,\n\t\tazuretablestorageurl,\n\t\tPurchaseId = UserFilter.ResultsAll.PurchaseId\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> FlattenResults"
+		}
+	}
+}
