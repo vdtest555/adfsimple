@@ -1,0 +1,290 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "bilogsmarketenergy"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"MarketId": {
+					"type": "integer"
+				},
+				"UserFilter": {
+					"type": "object",
+					"properties": {
+						"Filter": {
+							"type": "object",
+							"properties": {
+								"Postcode": {
+									"type": "string"
+								},
+								"CustomerType": {
+									"type": "integer"
+								},
+								"CurrentSupplierId": {
+									"type": "integer"
+								},
+								"IsTarifTypeFix": {
+									"type": "boolean"
+								},
+								"IsTarifTypeVariable": {
+									"type": "boolean"
+								},
+								"EnergySourceType": {
+									"type": "integer"
+								},
+								"ContractDuration": {
+									"type": "array"
+								},
+								"Suppliers": {
+									"type": "array"
+								},
+								"SelectedSuppliers": {
+									"type": "string"
+								},
+								"UseElectricity": {
+									"type": "boolean"
+								},
+								"MeterType": {
+									"type": "string"
+								},
+								"ElectricityConnectionTypeId": {
+									"type": "integer"
+								},
+								"ElectricityConsumptionStandard": {
+									"type": "integer"
+								},
+								"ElectricityConsumptionPeak": {
+									"type": "integer"
+								},
+								"ElectricityConsumptionOffPeak": {
+									"type": "integer"
+								},
+								"UseSolarPanels": {
+									"type": "boolean"
+								},
+								"SolarPanelConsumptionStandard": {
+									"type": "null"
+								},
+								"SolarPanelConsumptionPeak": {
+									"type": "null"
+								},
+								"SolarPanelConsumptionOffPeak": {
+									"type": "null"
+								},
+								"UseGas": {
+									"type": "boolean"
+								},
+								"GasConsumption": {
+									"type": "integer"
+								},
+								"ModelContractYearlyCost": {
+									"type": "number"
+								},
+								"OrderBy": {
+									"type": "string"
+								},
+								"ShowTop10": {
+									"type": "boolean"
+								}
+							}
+						},
+						"ResultsFiltered": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"ClientIndexInResultList": {
+										"type": "integer"
+									},
+									"PurchaseId": {
+										"type": "string"
+									},
+									"ElectricityProductId": {
+										"type": "integer"
+									},
+									"GasProductId": {
+										"type": "integer"
+									},
+									"SupplierId": {
+										"type": "integer"
+									},
+									"SupplierName": {
+										"type": "string"
+									},
+									"CanBuy": {
+										"type": "boolean"
+									},
+									"IsCollapsed": {
+										"type": "boolean"
+									},
+									"SelectedForCompare": {
+										"type": "boolean"
+									},
+									"ClientEvaluation": {
+										"type": "number"
+									},
+									"YearlyCost": {
+										"type": "number"
+									},
+									"TotalDiscount": {
+										"type": "integer"
+									},
+									"Saving": {
+										"type": "number"
+									}
+								}
+							}
+						},
+						"ResultsAll": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"ClientIndexInResultList": {
+										"type": "null"
+									},
+									"PurchaseId": {
+										"type": "string"
+									},
+									"ElectricityProductId": {
+										"type": "integer"
+									},
+									"GasProductId": {
+										"type": "integer"
+									},
+									"SupplierId": {
+										"type": "integer"
+									},
+									"SupplierName": {
+										"type": "string"
+									},
+									"CanBuy": {
+										"type": "boolean"
+									},
+									"IsCollapsed": {
+										"type": "boolean"
+									},
+									"SelectedForCompare": {
+										"type": "boolean"
+									},
+									"ClientEvaluation": {
+										"type": "number"
+									},
+									"YearlyCost": {
+										"type": "number"
+									},
+									"TotalDiscount": {
+										"type": "integer"
+									},
+									"Saving": {
+										"type": "number"
+									}
+								}
+							}
+						},
+						"ResultsRaw": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"ClientIndexInResultList": {
+										"type": "null"
+									},
+									"PurchaseId": {
+										"type": "string"
+									},
+									"ElectricityProductId": {
+										"type": "integer"
+									},
+									"GasProductId": {
+										"type": "integer"
+									},
+									"SupplierId": {
+										"type": "integer"
+									},
+									"SupplierName": {
+										"type": "string"
+									},
+									"CanBuy": {
+										"type": "boolean"
+									},
+									"IsCollapsed": {
+										"type": "boolean"
+									},
+									"SelectedForCompare": {
+										"type": "boolean"
+									},
+									"ClientEvaluation": {
+										"type": "number"
+									},
+									"YearlyCost": {
+										"type": "number"
+									},
+									"TotalDiscount": {
+										"type": "integer"
+									},
+									"Saving": {
+										"type": "number"
+									}
+								}
+							}
+						}
+					}
+				},
+				"Results": {
+					"type": "string"
+				},
+				"TrackingGuidJs": {
+					"type": "string"
+				},
+				"ip": {
+					"type": "string"
+				},
+				"websiteid": {
+					"type": "string"
+				},
+				"partnerid": {
+					"type": "integer"
+				},
+				"sessionid": {
+					"type": "string"
+				},
+				"url": {
+					"type": "string"
+				},
+				"actioncode": {
+					"type": "string"
+				},
+				"filterid": {
+					"type": "string"
+				},
+				"webserver": {
+					"type": "string"
+				},
+				"contractclassificationid": {
+					"type": "integer"
+				},
+				"azureblobstorageurl": {
+					"type": "string"
+				},
+				"azureblobstoragesas": {
+					"type": "string"
+				},
+				"azuretablestorageurl": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
